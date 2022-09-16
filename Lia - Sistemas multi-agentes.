@@ -1,0 +1,94 @@
+Lia - Sistemas multi-agentes.
+
+IA é uma àrea que estuda como fazer uma maquina passar no teste de turing.
+
+IA então é a capacidade que uma maquina tem de pensar "como um humano".
+
+Um sistema multi-agentes são sistemas com mais de um agente (agente é uma abstração do ambiente e faz interação com ele).
+
+O que é o LIA - estuda IA .
+
+Competição de multi-agentes .
+
+LIARA - 
+
+GESMA - Grupo de Estudo de Sistemas Multi-Agentes.
+
+Não precisa de conhecimento em programação para usar sistemas multi-agentes.
+
+2 desafios de implementação, completa 1 para ir para o outro.
+
+O que deve ser implementado e contexto.
+
+o que são agentes - um ser que age (no ambiente) com percepção (depende da percepção) > ação.
+
+como depende da percepção deixa o sistema flexivel, pois não depende exatamente do ambiente mas sim da percepção.
+
+um interruptor é um agente - pq percepção é mudança no estado e não perceber inteligentemente.
+
+ambiente age no agente através de variaveis.
+
+agentes triviais - são reativos, respondem a mudanças.
+
+agentes inteligentes - Reativos.
+Proativos - orientam-se a objetivos.
+Habilidade Social - interagem com outros agentes.
+*Mobilidade - andar na rede.
+*Veracidade - infos falsas.
+*Benevolencia .
+
+Objetos - conjunto de estados e métodos de alteração de estados, ações (prever ambiente e mudar o amb) não previstas, o escopo do objeto é absoluto.
+
+Agentes - possuem ações/intençoes, tomam decisões de execuções ou não, podem operar fora do escopo, são autônomos, e podem usar Objetos.
+
+Programação Orientada a Agentes - capacidade de se comportar em situações não previstas.
+
+Objeto não precisa de incentivo, agentes inteligentes fazem por um motivo ($).
+
+Sistemas intencionais - comportamento descrito através da atribuição de crenças, desejos e outras atitudes racionais.
+
+agentes com estado - armazenam estados.
+
+agentes tem crenças desejos e intenções.
+
+agentes de raciocinio simbolico - traduzir o mundo através de uma descrição simbolica precisa.
+
+x mais positivo, y mais positivo, forma de raciocinar lados.
+
+posicao(esquerda) - agente na posição esquerda.
+sujo(direita) - sujeira na direita.
+
+arquitetura BDI - Crença (acredito que vi uma cadeira), Desejo, Intenção e aí planos (formas de realizar os desejos). para um desejo se tornar intenção deve ter um conjunto de regras.
+
+Ciclo de raciocinio e planejamento - evento gatilho tem um contexto e um corpo.
+
+estou_posição_suja(P) :- estou(p) & sujo(p).
+
+sujo (direito)
+
+estou (esquerdo)
+
++!limpar_ambiente : estou(X) & sujo(x)
+
+<- !limpar_posição(x);
+
+!limpar_ambiente.
+
+desafio - Aspirador
+- agente deverá ter a função de limpar e se mover
+- o agente poderá se movimentar entre as posições esquerda e direita
+- caso a posição em que o agente está esteja suja, o agente devera limpá-la
+- Caso ambas as posições estejam limpas, o agente finaliza a sua execução
+
+crença - x(y)
+desejo - !
+planos - +! plano se ":" plano
+
+
+estou(x1-y1)
+sujo(x2-y2)
+estou_posição_suja(x3-y3) :- estou(x1-y1) & sujo(x1-y1)
++!limpar_ambiente : estou(x1-y1) & sujo(x1-y1)
+<- !limpar_posição(x1-y1)
+!limpar_ambiente
+.print ("limpei", x1-y2)

@@ -1,0 +1,7 @@
+MAS aspiradot {
+
+infrastructure: Centralised
+
+agents:
+		agent1 aspirador;
+		}
